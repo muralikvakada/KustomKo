@@ -143,9 +143,39 @@
     .hl-chip b{display:block;color:var(--text);font-size:12.5px}
     .hl-chip span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
     .hl-logos{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;opacity:.95}
-    .hl-logo{width:36px;height:36px;border-radius:12px;border:1px solid var(--line);background:rgba(0,0,0,.14);display:grid;-items:center;font-weight:800;color:rgba(255,255,255,.7);font-size:12px}
+   .hl-logo{
+  width:70px;
+  height:40px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:rgba(0,0,0,.14);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:6px 10px;
+  transition:.2s ease;
+}
 
-    /* Sections */
+.hl-logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+  filter:grayscale(1) contrast(1.05);
+  opacity:.85;
+  transition:.2s ease;
+}
+
+.hl-logo:hover{
+  border-color:rgba(255,255,255,.22);
+  transform:translateY(-2px);
+}
+
+.hl-logo:hover img{
+  filter:grayscale(0);
+  opacity:1;
+}
+
     section{padding:46px 0}
     .sectionTitle{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:16px}
     .sectionTitle h3{margin:0;font-size:28px}
@@ -341,8 +371,29 @@
                 <div class="hl-chip"><b>Americas-focused</b><span>Remote-friendly for US & Canada</span></div>
               </div>
               <div class="hl-logos" aria-label="Clients">
-                <div class="hl-logo">A</div><div class="hl-logo">B</div><div class="hl-logo">C</div><div class="hl-logo">D</div><div class="hl-logo">E</div>
-              </div>
+
+  <a class="hl-logo" href="https://mrpergola.com/" target="_blank" rel="noopener">
+    <img src="mrpergola1.png" alt="Mr Pergola logo 1" loading="lazy">
+  </a>
+
+  <a class="hl-logo" href="https://mrpergola.com/" target="_blank" rel="noopener">
+    <img src="mrpergola2.png" alt="Mr Pergola logo 2" loading="lazy">
+  </a>
+
+  <a class="hl-logo" href="https://mrpergola.com/" target="_blank" rel="noopener">
+    <img src="mrpergola3.png" alt="Mr Pergola logo 3" loading="lazy">
+  </a>
+
+  <a class="hl-logo" href="https://mrpergola.com/" target="_blank" rel="noopener">
+    <img src="mrpergola4.png" alt="Mr Pergola logo 4" loading="lazy">
+  </a>
+
+  <a class="hl-logo" href="https://mrpergola.com/" target="_blank" rel="noopener">
+    <img src="mrpergola5.png" alt="Mr Pergola logo 5" loading="lazy">
+  </a>
+
+</div>
+
               <div style="margin-top:10px;font-size:12px;color:var(--muted)">
                 Replace these placeholders with real client logos, industries served, turnaround times, or outcomes.
               </div>
