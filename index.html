@@ -256,10 +256,23 @@
     .contact{display:grid;grid-template-columns:1fr 1fr;gap:14px}
     form{padding:16px}
     label{display:block;font-size:12px;color:var(--muted);margin:10px 0 6px}
-    input, textarea{
-      width:100%;padding:12px;border-radius:14px;border:1px solid var(--line);
-      background:rgba(0,0,0,.18);color:var(--text);outline:none
-    }
+    input,
+textarea{
+  width:100%;
+  padding:12px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:rgba(0,0,0,.18);
+  color:var(--text);
+  outline:none;
+
+  /* Make font uniform */
+  font-family: inherit;
+  font-size:14px;
+  font-weight:400;
+  letter-spacing:.2px;
+}
+
     textarea{min-height:120px;resize:vertical}
     .note{color:var(--muted);font-size:12px;margin-top:10px}
 
