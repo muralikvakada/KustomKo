@@ -81,12 +81,22 @@
     .menuBtn span{display:block;width:18px;height:2px;background:rgba(234,240,246,.9);border-radius:999px}
 
     .mobileNav{
-      position:fixed;inset:0;z-index:50;
-      background:rgba(0,0,0,.55);
-      backdrop-filter:blur(6px);
-      display:none;align-items:flex-start;justify-content:center;
-      padding:18px
-    }
+  position:fixed;
+  inset:0;
+  z-index:50;
+  background:rgba(0,0,0,.78);          /* darker overlay */
+  backdrop-filter: blur(14px);          /* stronger blur */
+  -webkit-backdrop-filter: blur(14px);
+  display:none;
+  align-items:flex-start;
+  justify-content:center;
+  padding:18px;
+}
+
+    .mobileNav.open{
+  isolation:isolate;
+}
+
     .mobileNav.open{display:flex}
     .mobileNavPanel{
       width:100%;max-width:520px;padding:14px;
@@ -373,7 +383,7 @@
             </div>
 
             <div class="mini">
-              <strong>Trusted by clients (sample)</strong>
+              <strong>Trusted by clients </strong>
               <div class="hl-grid">
                 <div class="hl-chip"><b>Multi-skill execution</b><span>Brand • Print • Packaging • Docs • Video • CAD support</span></div>
                 <div class="hl-chip"><b>Americas-focused</b><span>Remote-friendly for US & Canada</span></div>
