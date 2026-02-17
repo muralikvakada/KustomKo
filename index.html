@@ -34,8 +34,8 @@
     .container{max-width:1120px;margin:0 auto;padding:0 20px}
 
     /* Offset anchor jumps for sticky header */
-    section{scroll-margin-top: 92px;}
-    html{scroll-padding-top: 92px;}
+    section{scroll-margin-top: 50px;}
+    html{scroll-padding-top: 50px;}
 
     /* Top bar */
     .topbar{
@@ -182,6 +182,18 @@
     .sectionTitle{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:16px}
     .sectionTitle h3{margin:0;font-size:28px}
     .sectionTitle p{margin:0;color:var(--muted);font-size:13px;max-width:74ch}
+
+    /* Force consistent section title sizing */
+#includes h2{
+  font-size:28px;
+  margin:0;
+}
+
+#includes > .sectionTitle p,
+#includes p:first-of-type{
+  font-size:13px;
+  color:var(--muted);
+}
 
     /* About */
     .aboutWrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px;align-items:center}
