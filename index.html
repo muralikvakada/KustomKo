@@ -321,12 +321,26 @@
   }
     }
     
-    @media (max-width: 560px){
-      .hero h2{font-size:36px}
-      .grid3,.portfolio{grid-template-columns:1fr}
-      .steps{grid-template-columns:1fr}
-      .hl-grid{grid-template-columns:1fr}
-    }
+   @media (max-width: 560px){
+  .hero h2{font-size:36px}
+  .grid3,.portfolio{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .hl-grid{grid-template-columns:1fr}
+
+  /* Hero mobile framing fix */
+  .heroInner{
+    padding-top: 22px;
+  }
+
+  .hero .heroGrid{
+    background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 16px;
+  }
+}
+
   </style>
 </head>
 
