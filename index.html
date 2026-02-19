@@ -772,7 +772,13 @@
         </div>
 
         <div class="contact">
-          <form class="card" id="quoteForm" name="quoteForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data">
+         <form class="card" id="quoteForm" name="quoteForm"
+      method="POST"
+      action="/?sent=1#contact"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      enctype="multipart/form-data">
+
             <input type="hidden" name="form-name" value="quoteForm" />
             <p style="display:none">
               <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
@@ -899,22 +905,16 @@
       statusEl.style.background = isError ? 'rgba(255,80,80,.08)' : 'rgba(80,255,170,.06)';
     }
 
-    form && form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      setStatus('Sending…');
-
-      try{
-        const formData = new FormData(form);
-        // Netlify requires posting to the current site (root is fine)
-        const res = await fetch('/', { method: 'POST', body: formData });
-        if(!res.ok) throw new Error('Bad response');
-
-        form.reset();
-        setStatus('Thanks — we got your inquiry. We’ll reply to you by email shortly.');
-      }catch(err){
-        setStatus('Couldn’t send right now. Please use “Email instead” or try again in a moment.', true);
-      }
-    });
+    <script>
+  const statusEl = document.getElementById('formStatus');
+  const params = new URLSearchParams(window.location.search);
+  if (statusEl && params.get('sent') === '1') {
+    statusEl.style.display = 'block';
+    statusEl.textContent = 'Thanks — we got your inquiry. We’ll reply to you by email shortly.';
+    statusEl.style.border = '1px solid rgba(120,255,180,.28)';
+    statusEl.style.background = 'rgba(80,255,170,.06)';
+  }
+</script>
 </script>
 </body>
 </html>
